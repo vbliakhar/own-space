@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Layout from './hoc/Layout/Layout'
+import FirstPage from './container/FirstPage/FirstPage'
+import Second from './container/Second/Second'
+import Third from './container/Third/Third'
+import {Route, Switch} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Switch>
+          <Route path='/third' component={Third}></Route>
+          <Route path='/second' component={Second}></Route>
+          <Route path='/' component={FirstPage}></Route>
+          <Route render={()=><h1>404 not found</h1>}></Route>
+        </Switch>
+      </Layout>
     </div>
   );
 }

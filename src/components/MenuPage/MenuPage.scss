@@ -1,0 +1,31 @@
+.MenuPege{
+  display: flex;
+  justify-content: center;
+  z-index: 90;
+  min-width: 500px;
+  box-sizing: border-box;
+  flex-direction: column;
+  ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    width: 800px;
+    height: 50px;
+    li{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        cursor:pointer;
+        background: rgba(0,0,0,0.1);
+        color: white;
+      }
+    }
+  }
+}
